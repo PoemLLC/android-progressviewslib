@@ -51,7 +51,7 @@ abstract class ProgressView extends View implements ProgressShape {
     protected int min;
     protected Paint backgroundPaint;
     protected Paint foregroundPaint;
-    private String PROGRESS = getResources().getString(R.string.progress);
+    private String PROGRESS = getResources().getString(R.string.progress_value);
     protected int startPosInDegrees = ProgressStartPoint.DEFAULT.ordinal();
     private ObjectAnimator objAnimator;
     protected ProgressViewTextData text_data = new ProgressViewTextData(
@@ -95,7 +95,7 @@ abstract class ProgressView extends View implements ProgressShape {
                 attrs, R.styleable.CircleProgressBar, 0, 0);
         try {
             progress = typedArray.getFloat(
-                    R.styleable.CircleProgressBar_progress, progress);
+                    R.styleable.CircleProgressBar_progress_value, progress);
             strokeWidth = typedArray.getDimension(
                     R.styleable.CircleProgressBar_progress_width, strokeWidth);
             backgroundStrokeWidth = typedArray.getDimension(
